@@ -40,4 +40,8 @@ body {
 #answers {
   padding-top: 10px;
 }
+.btn-primary{
+    display: flex;
+    flex-direction: column;
+}
 
