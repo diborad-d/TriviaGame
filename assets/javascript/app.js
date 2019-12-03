@@ -1,22 +1,6 @@
-let currentQuestionIndex = 0;
-const questions = [
-  {
-    questionText: "Who was the legendary Benedictine monk who invented champagne?",
-    choiceA: "Dom Perignon",
-    choiceB: "Henry Hugh",
-    choiceC: "Walter William",
-    choiceD: "Beatrice Richard ",
-    correctAnswer: "A"
-  },
-  {
-    questionText: "What's the largest freshwater lake in the world?",
-    choiceA: "Lake Huron",
-    choiceB: "Lake Superior",
-    choiceC: "Lake Victoria",
-    choiceD: "Lake Michigan ",
-    correctAnswer: "B"
-  }
-];
+const myQuestions = require('myQuestion');
+let i = 0;
+
 window.onload = function() {
   $("#radioA").click(function() {
     radioBtnChecked("A");
@@ -39,8 +23,10 @@ window.onload = function() {
 
   showNextQuestion();
 };
+// var i = 0;
+// var showNextQuestion = myQuestions
 function showNextQuestion() {
-  showQuestion(questions[currentQuestionIndex]);
+  showQuestion(question[i]);
 }
 function showQuestion(question) {
   $("#question").text(question.questionText);
