@@ -1,4 +1,4 @@
-<!DOCclass html>
+<!-- <!DOCclass html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,45 +15,81 @@
   </head>
   <body>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-      Launch demo modal
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <!-- Default unchecked -->
-            <div class="custom-control custom-radio">
-              <input type="radio" name="defaultExampleRadios" />
-              <label id="optionA" for="defaultUnchecked">Default unchecked</label>
-            </div>
-            <div class="custom-control custom-radio">
-              <input type="radio" class="custom-control-input2" name="defaultExampleRadios" />
-              <label id="optionB" for="defaultUnchecked">Default unchecked</label>
-            </div>
-            <div class="custom-control custom-radio">
-              <input type="radio" class="custom-control-input3" name="defaultExampleRadios" />
-              <label id="optionC" for="defaultUnchecked">Default unchecked</label>
-            </div>
-            <div class="custom-control custom-radio">
-              <input type="radio" class="custom-control-input4" name="defaultExampleRadios" />
-              <label id="optionD" for="defaultUnchecked">Default unchecked</label>
-              <button type="button"><a href="#" class="next">Next &raquo;</a></button>
-              <button id="submit">Submit Quiz</button>
-            </div>
-            <!-- Default checked -->
-          </div>
-          <div class="modal-footer"></div>
-        </div>
-      </div>
+    <div id="start">start quiz</div>
+    <div id="quiz" style="display:none;">
+        <div id="question"><p>question</p></div>
+        <div id="timer">
+            <div id="counter">30</div>
+            <div id="bgdtimeGuage"></div>
+            <div id="timeGuage"></div>
+        </div>  
     </div>
+    <div id="choices">
+        <div class="choice" id="A">A</div>
+        <div class="choice" id="B">B</div>
+        <div class="choice" id="C">C</div>
+        <div class="choice" id="D">D</div>
+    </div>
+    <div id="scorecountainer" style="display: none"></div>
   </body>
-</html>
+</html> -->
+let q = questions[currentQuestioinIndex];
+  question.innerHTML = "<h5>" + q.question + "<h5>";
+  choiceA.innerHTML = q.choiceA;
+  choiceB.innerHTML = q.choiceB;
+  choiceC.innerHTML = q.choiceC;
+  choiceD.innerHTML = q.choiceD;
+}
+// next question
+currentQuestioinIndex = 0;
+renderQuestion();
+currentQuestioinIndex++;
+renderQuestion();
+//
+
+// const questionTwo = {
+//   question: "What's the largest freshwater lake in the world?",
+//   choices: ["Lake Huron", "Lake Superior", "Lake Victoria", "Lake Michigan "],
+//   correctAnswer: 1
+// };
+// const questionThree = {
+//   question: "Where would you find the Sea of Tranquility?",
+//   choices: ["Mars", "Earth", "The Mooon", "Mecuriy"],
+//   correctAnswer: 2
+// };
+// const questionFour = {
+//   question: "Who was the legendary Benedictine monk who invented champagne?",
+//   choices: ["Dom Perignon", "Henry Hugh", "Walter William", "Beatrice Richard "],
+//   correctAnswer: 0
+// };
+// const questionFive = {
+//   question: "What kind of weapon is a falchion? ",
+//   choices: ["Revolver", "Crossbow", "Spear", "Sword"],
+//   correctAnswer: 3
+// };
+//   const questionSix = {
+//     question: "What is another word for lexicon?",
+//     answers: ["Dom Perignon", "Henry Hugh", "Walter William", "Beatrice Richard "],
+//     correctAnswer: 0
+//   };
+//   const questionSeven = {
+//     question: "Who was the legendary Benedictine monk who invented champagne?",
+//     answers: ["Dom Perignon", "Henry Hugh", "Walter William", "Beatrice Richard "],
+//     correctAnswer: 0
+//   };
+//   const questionEight = {
+//     question: "Who was the legendary Benedictine monk who invented champagne?",
+//     answers: ["Dom Perignon", "Henry Hugh", "Walter William", "Beatrice Richard "],
+//     correctAnswer: 0
+//   };
+// let currentQuestion = randomIndex();
+// window.onload = function() {
+//   setup();
+// };
+// function setup() {
+//   $("#currentQuestioin").text(questionOne.question);
+//   $("#optionA").text(questionOne.choices[0]);
+//   $("#optionB").text(questionOne.choices[1]);
+//   $("#optionC").text(questionOne.choices[2]);
+//   $("#optionD").text(questionOne.choices[3]);
+// }
