@@ -12,7 +12,7 @@
   <body>
     <!-- Button trigger modal -->
     <!-- <div class="modal-dialog modal-dialog-centered" role="document"> -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    <button type="button" class="btn btn-primary" id="startBtn" data-toggle="modal" data-target="#exampleModalCenter">
       Start Trivia
     </button>
     <!-- Modal -->
@@ -45,14 +45,18 @@
               <!-- <button type="button"><a href="#" class="next">Next &raquo;</a></button> -->
             </div>
             <div>
-                <h5 id="correct">Correct!</h5>
-                <h5 id="wrong">The correct answer is :</h5>
+                <h5 id="correct"></h5>
+                <h5 id="wrong"></h5>
             
-            <input class="btn-primary" id="submit" type="button" value="Submit Answer"></input>
+            <input class="btn-primary" id="submit" type="button" value="Submit Answer">
+      
+ </input>
 
             <!-- Default checked -->
           </div>
-          <div class="modal-dialog modal-dialog-centered" >00:00</div>
+          <div class="modal-dialog modal-dialog-centered" id="timer">
+           <h2>00:30</h2>
+        </div>
                         <!-- set countdown to green and last 5 seconds to red -->
         </div>
       </div>
